@@ -27,10 +27,10 @@ export default {
         .then(response => response.json())
         .then((json) => {
           this.activities = json.filter((activity) => {
-            const eventDate = moment(activity.acf.fecha).format('YYYY-MM-DD');
             const todayDate = moment().format('YYYY-MM-DD');
+            const eventDate = moment(activity.acf.fecha).format('YYYY-MM-DD');
             return moment(eventDate).isAfter(todayDate);
-          });
+          }).sort((a, b) => a.acf.fecha - b.acf.fecha);
           this.loading = false;
         })
         .catch((err) => {
