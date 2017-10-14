@@ -1,0 +1,79 @@
+@import "../../styles/variables.css";
+
+.activity-single {
+  font-family: 'Roboto Slab', serif;
+  background: var(--white);
+  padding: 0.5rem 1rem;
+  border-top: 5px solid;
+}
+
+img {
+  width: 100%;
+}
+
+.activity-title {
+  font-weight: 400;
+  margin: 1rem 0 0;
+}
+
+.activity-subtitle {
+  color: var(--gray200);
+  margin: 0.25rem 0 1rem;
+}
+
+.time {
+  margin-top: 1rem;
+  display: flex;
+  & span {
+    padding-left: 0.25rem;
+  }
+}
+
+.calendar { 
+  display: flex;
+  justify-content: flex-end;
+  font-size: var(--xsmall);
+  margin-bottom: 0.5rem;
+  & svg {
+    margin-left: 0.25rem;
+    fill: var(--mainColor);
+    width: 1rem;
+    height: 1rem;
+  }
+}
+
+.activity-excerpt {
+  font-size: 1rem;
+  color: var(--gray400);
+  line-height: 1.5;
+}
+
+.evento-guindostan {
+  border-color: var(--event); 
+  & .activity-title {
+    color: var(--event);
+  }
+}
+
+.cultura {
+  border-color: var(--cultura); 
+  & .activity-title {
+    color: var(--cultura);
+
+  }
+}
+
+.charlas-conferencias {
+  border-color: var(--conferencias);
+  & .activity-title {
+    color: var(--conferencias);
+  }
+}
+
+.medio-ambiente {
+  border-color: var(--medio-ambiente);
+
+  & .activity-title {
+    color: var(--medio-ambiente);
+  }
+}

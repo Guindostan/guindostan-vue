@@ -1,0 +1,8 @@
+section.agenda-wrapper
+  h1 Próximas actividades
+  div.agenda
+    gdt-excerpt-activity(
+      v-for="activity in activities"
+      :activity="activity"
+      :key="activity.id"
+    )

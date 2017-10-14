@@ -1,0 +1,28 @@
+@import "../../styles/variables.css";
+
+h1 {
+  font-size: var(--xxlarge);
+  font-weight: 200;
+  color: var(--gray200);
+}
+
+.agenda {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .agenda {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+@media (min-width: 1300px) {
+  .agenda {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}

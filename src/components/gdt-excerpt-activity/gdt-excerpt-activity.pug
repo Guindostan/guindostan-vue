@@ -1,0 +1,22 @@
+article.activity-single(:class="category")
+  div.time  
+    time(:datetime="date") {{date}}
+    span(v-if="activity.acf.time") | {{activity.acf.time}} 
+    span(v-if="activity.acf.precio") | {{activity.acf.precio}}
+  h2.activity-title(v-html="activity.title.rendered")
+  div.activity-subtitle(v-html="activity.acf.subtitle")
+  img(
+    :src="thumbnail"
+    :alt="activity.alt_text"
+  )
+  p.activity-excerpt(v-html="activity.excerpt.rendered")
+  a.calendar(
+    v-if="activity.acf.calendar"
+    :href="activity.acf.calendar"
+    title="Añade este evento a tu calendario de google"
+    target="_blank"
+  )
+    span Añade a tu calendario
+    svg(viewBox="0 0 1024 1024")
+      title Añade este evento a tu calendario
+      path(d="M768 128v-128h-128v128h-256v-128h-128v128h-256v128h1024v-128zM128 640h768v128h-768zM128 384h768v128h-768zM128 1024h640l128-128h-768z")

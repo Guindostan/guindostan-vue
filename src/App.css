@@ -1,0 +1,24 @@
+@import "./styles/variables.css";
+#app {
+  min-height: 100vh;
+  background-color: var(--gray10);
+}
+
+.sidebar {
+  background-color: var(--mainColor);
+}
+
+@media (min-width: 768px) {
+  #app {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-areas: "sidebar main";
+  }
+  .sidebar {
+    grid-area: sidebar;
+    min-width: 400px;
+  }
+  .main {
+    grid-area: main;
+  }
+}
