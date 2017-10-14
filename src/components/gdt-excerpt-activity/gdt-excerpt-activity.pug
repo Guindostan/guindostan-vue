@@ -3,7 +3,11 @@ article.activity-single(:class="category")
     time(:datetime="date") {{date}}
     span(v-if="activity.acf.time") | {{activity.acf.time}} 
     span(v-if="activity.acf.precio") | {{activity.acf.precio}}
-  h2.activity-title(v-html="activity.title.rendered")
+  h2.activity-title
+    router-link(
+      :to="{ name: 'actividad', params: { slug: activity.slug, id: activity.id }}"
+      v-html="activity.title.rendered"
+    )
   div.activity-subtitle(v-html="activity.acf.subtitle")
   img(
     :src="thumbnail"

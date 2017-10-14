@@ -1,0 +1,46 @@
+@import "../../styles/variables.css";
+
+.title {
+  font-size: var(--xxlarge);
+  font-weight: normal;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.subtitle {
+  margin-top: 0;
+  font-size: var(--xlarge);
+  color: var(--gray100);
+}
+
+.activity-wrapper {
+  max-width: 960px;;
+}
+
+.activity {
+  display: flex;
+}
+
+.activity-data {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.activity-summary {
+  list-style: outside;
+  font-size: var(--large);
+}
+
+.activity-content a {
+  color: var(--mainColor);
+}
+
+.activity-picture {
+  max-width: 400px;
+
+  & img {
+    max-width: 100%;
+  }
+}
+
+

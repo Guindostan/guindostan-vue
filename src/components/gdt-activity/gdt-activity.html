@@ -1,0 +1,41 @@
+<article v-if="activity" class="activity-wrapper">
+  <h2 class="title" v-html="activity.title.rendered">{{ activity.title.rendered }}</h2>
+  <p class="subtitle" v-html="activity.acf.subtitle">{{ activity.acf.subtitle }}</p>
+
+  <div class="activity">
+    <div class="activity-data">
+      <ul class="activity-summary">
+        <li>
+          <strong>Fecha:</strong>
+          <time :datetime="date">{{date}}</time> |
+          <span>{{ activity.acf.time }}</span>
+        </li>
+        <li>
+          <strong>Lugar</strong>
+          Calle Ardemans, 5
+        </li>
+        <li v-if="activity.acf.price">
+          <strong>precio</strong>
+          {{ activity.acf.price }}
+        </li>
+        <li v-else>
+          <strong>Precio</strong>
+          Entrada libre
+        </li>
+      </ul>
+      <a 
+        class="calendar"
+        v-if="activity.acf.calendar"
+        :href="activity.acf.calendar"
+        title="Añade este evento a tu calendario de google"
+        target="_blank">
+        Añade este evento a tu calendario
+      </a>
+      <p class="activity-content" v-html="activity.content.rendered"></p>
+    </div>
+    <div class="activity-picture">
+      <img :src="media.source_url" :alt="activity.alt_text" />
+    </div>
+  </div>
+
+</article>
