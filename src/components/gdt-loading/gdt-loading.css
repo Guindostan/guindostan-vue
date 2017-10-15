@@ -1,0 +1,22 @@
+@import "../../styles/variables.css";
+
+.circle-wraper {
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.circle {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--mainColor);
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

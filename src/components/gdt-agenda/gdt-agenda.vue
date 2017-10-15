@@ -2,6 +2,7 @@
 
 <script>
 import excerptActivity from '@/components/gdt-excerpt-activity/gdt-excerpt-activity';
+import loading from '@/components/gdt-loading/gdt-loading';
 import moment from 'moment';
 
 export default {
@@ -17,6 +18,7 @@ export default {
   },
   components: {
     'gdt-excerpt-activity': excerptActivity,
+    'gdt-loading': loading,
   },
   methods: {
     fetch() {
