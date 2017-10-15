@@ -1,0 +1,10 @@
+article.group-single 
+  h2.title
+    router-link(
+      :to="{ name: 'group', params: { slug: group.slug, id: group.id }}"
+      v-html="group.title.rendered"
+    )
+  router-link(:to="{ name: 'group', params: { slug: group.slug, id: group.id }}")
+    img(:src="media.source_url", :alt="media.alt_text")
+  p {{ group.excerpt.rendered.slice(0, 300) }}...
+  

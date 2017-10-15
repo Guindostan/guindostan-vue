@@ -31,7 +31,7 @@
     margin: 0 0.25rem;
     will-change: border-bottom;
 
-    &.router-link-active,
+    &.router-link-exact-active,
     &:hover {
        border-bottom: 2px solid var(--mainColor); 
     }

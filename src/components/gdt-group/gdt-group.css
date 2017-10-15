@@ -1,0 +1,30 @@
+@import "../../styles/variables.css";
+
+.group-wrapper {
+  max-width: 960px;
+}
+
+.group-image {
+  max-width: 100%;
+}
+
+.group-text {
+  display: flex;
+}
+
+.group-content {
+  flex: 1;
+  margin: 0;
+  margin-right: 4rem;
+}
+
+p {
+  text-align: left !important;
+}
+
+
+.group-sidebar {
+  max-width: 200px;
+  font-size: var(--small);
+  color: var(--gray300);
+}

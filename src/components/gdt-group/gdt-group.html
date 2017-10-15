@@ -1,0 +1,15 @@
+<article v-if="group" class="group-wrapper">
+  <h2 class="title" v-html="group.title.rendered">{{ group.title.rendered }}</h2>
+  <div class="group-text">
+    <div class="group-content">
+      <img class="group-image" :src="media.source_url" :alt="group.alt_text" />
+      <div v-html="group.content.rendered"></div>
+    </div>
+    <sidebar class="group-sidebar">
+      <h3>información sobre grupos</h3>
+      <p>Los grupos de Guindostán son actividades que se realizan de manera periódica en la asociación y están compuestos mayoritariamente
+      por socios. Estos grupos tienen prioridad a la hora de reservar el local y para realizar sus actividades, entre otras ventajas</p>
+      <p>Si quieres unirte a este grupo hazte socio de Guindostán.</p>
+    </sidebar>
+  </div>
+</article>

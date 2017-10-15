@@ -9,10 +9,11 @@ article.activity-single(:class="category")
       v-html="activity.title.rendered"
     )
   div.activity-subtitle(v-html="activity.acf.subtitle")
-  img(
-    :src="thumbnail"
-    :alt="activity.alt_text"
-  )
+  router-link(:to="{ name: 'actividad', params: { slug: activity.slug, id: activity.id }}")
+    img(
+      :src="thumbnail"
+      :alt="activity.alt_text"
+    )
   p.activity-excerpt(v-html="activity.excerpt.rendered")
   a.calendar(
     v-if="activity.acf.calendar"

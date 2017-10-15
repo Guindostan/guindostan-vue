@@ -1,0 +1,18 @@
+@import "../../styles/variables.css";
+
+.group-single {
+  background: var(--white);
+  padding: 0.5rem 1rem;
+  border-top: 5px solid var(--mainColor);
+  font-family: 'Roboto Slab', serif;
+}
+
+.title {
+  font-weight: normal;
+  color: var(--mainColor);
+}
+
+
+img {
+  max-width: 100%;
+}

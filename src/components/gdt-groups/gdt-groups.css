@@ -1,0 +1,25 @@
+@import "../../styles/variables.css";
+
+.groups-wrapper {
+  max-width: 960px;
+}
+
+h1 {
+  font-size: var(--xxlarge);
+  font-weight: 200;
+}
+
+.groups {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .groups {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+}
