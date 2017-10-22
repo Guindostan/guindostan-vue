@@ -1,12 +1,15 @@
 <template src="./gdt-group.html"></template>
 
 <script>
+import gdtLoading from '@/components/gdt-loading/gdt-loading';
+
 export default {
   name: 'gdt-group',
   data() {
     return {
       group: '',
       media: '',
+      loading: true,
     };
   },
   props: [
@@ -16,6 +19,9 @@ export default {
   created() {
     this.getGroup();
   },
+  components: {
+    'gdt-loading': gdtLoading,
+  },
   methods: {
     retrieveMedia() {
       const url = `http://guindostan.org/wp-json/wp/v2/media/${this.group.featured_media}`;
@@ -24,8 +30,10 @@ export default {
         .then(response => response.json())
         .then((json) => {
           this.media = json;
+          this.loading = false;
         })
         .catch((err) => {
+          this.loading = false;
           throw err.message;
         });
     },

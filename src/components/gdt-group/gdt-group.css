@@ -4,6 +4,15 @@
   max-width: 960px;
 }
 
+.title {
+  font-size: var(--xxlarge);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: var(--gray200);
+  font-weight: 200;
+}
+
+
 .group-image {
   max-width: 100%;
 }

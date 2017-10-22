@@ -1,24 +1,26 @@
 <template src="./gdt-groups.pug" lang="pug"></template>
 
 <script>
-import gdtGroups from '@/components/gdt-excerpt-group/gdt-excerpt-group';
+import gdtGroupExcerpt from '@/components/gdt-excerpt-group/gdt-excerpt-group';
+import gdtLoading from '@/components/gdt-loading/gdt-loading';
 
 export default {
   name: 'gdt-groups',
   data() {
     return {
       groups: {},
+      loading: true,
     };
   },
   created() {
     this.getGroups();
   },
   components: {
-    'gdt-excerpt-group': gdtGroups,
+    'gdt-excerpt-group': gdtGroupExcerpt,
+    'gdt-loading': gdtLoading,
   },
   methods: {
     getGroups() {
-      this.loading = true;
       const url = 'http://guindostan.org/wp-json/wp/v2/groups';
 
       return window.fetch(url)

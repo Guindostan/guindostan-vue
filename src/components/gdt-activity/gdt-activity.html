@@ -1,8 +1,8 @@
 <article v-if="activity" class="activity-wrapper">
   <h2 class="title" v-html="activity.title.rendered">{{ activity.title.rendered }}</h2>
   <p class="subtitle" v-html="activity.acf.subtitle">{{ activity.acf.subtitle }}</p>
-
-  <div class="activity">
+  <gdt-loading v-if="loading"></gdt-loading>
+  <div class="activity" v-if="!loading">
     <div class="activity-data">
       <ul class="activity-summary">
         <li>

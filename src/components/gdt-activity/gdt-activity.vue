@@ -2,6 +2,7 @@
 
 <script>
 import moment from 'moment';
+import gdtLoading from '@/components/gdt-loading/gdt-loading';
 
 export default {
   name: 'gdt-activity',
@@ -11,6 +12,7 @@ export default {
       media: '',
       date: '',
       time: '',
+      loading: true,
     };
   },
   props: [
@@ -21,6 +23,9 @@ export default {
     moment.locale('es');
     this.getPost();
   },
+  components: {
+    'gdt-loading': gdtLoading,
+  },
   methods: {
     retrieveMedia() {
       const url = `http://guindostan.org/wp-json/wp/v2/media/${this.activity.featured_media}`;
@@ -29,6 +34,7 @@ export default {
         .then(response => response.json())
         .then((json) => {
           this.media = json;
+          this.loading = false;
         })
         .catch((err) => {
           throw err.message;

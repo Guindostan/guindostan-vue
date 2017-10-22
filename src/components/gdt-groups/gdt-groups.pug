@@ -1,7 +1,8 @@
 section.groups-wrapper
   h1 Grupos de Guindostán
   p Los grupos de Guindostán son actividades que se realizan de manera periódica en la asociación y están compuestos mayoritariamente por socios. Estos grupos además de realizar actividades habituales, como ensayos, arreglar bicicletas, o repartos del grupo de consumo, de vez en cuando realizan actividades abiertas a todo el público. Para participar en un grupo, o proponer la creación de un específico que te interese, hazte socio de Guindostán.
-  div.groups
+  gdt-loading(v-if="loading")
+  div.groups(v-if="!loading")
     gdt-excerpt-group(
       v-for="group in groups"
       :group="group"

@@ -1,6 +1,7 @@
 <article v-if="group" class="group-wrapper">
   <h2 class="title" v-html="group.title.rendered">{{ group.title.rendered }}</h2>
-  <div class="group-text">
+  <gdt-loading v-if="loading"></gdt-loading>
+  <div class="group-text" v-if="!loading">
     <div class="group-content">
       <img class="group-image" :src="media.source_url" :alt="group.alt_text" />
       <div v-html="group.content.rendered"></div>
