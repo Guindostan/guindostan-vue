@@ -1,0 +1,48 @@
+@import "../../styles/variables.css";
+
+.title {
+  font-size: var(--xxlarge);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  color: var(--gray200);
+  font-weight: 200;
+}
+
+.subtitle {
+  margin-top: 0;
+  font-size: var(--xlarge);
+  color: var(--gray100);
+}
+
+.about-wrapper {
+  max-width: 960px;;
+}
+
+/* 
+.activity {
+  display: flex;
+}
+
+.activity-data {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.activity-summary {
+  list-style: outside;
+  font-size: var(--large);
+}
+
+.activity-content a {
+  color: var(--mainColor);
+}
+
+.activity-picture {
+  max-width: 400px;
+
+  & img {
+    max-width: 100%;
+  }
+} */
+
+

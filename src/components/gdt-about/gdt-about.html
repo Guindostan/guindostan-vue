@@ -1,0 +1,9 @@
+<article v-if="about" class="about-wrapper">
+  <gdt-loading v-if="loading"></gdt-loading>
+  <h2 class="title" v-html="about.title.rendered">
+    {{ about.title.rendered }}
+  </h2>
+  <div v-html="about.content.rendered">
+    {{ about.content.rendered }}
+  </div>
+</article>

@@ -5,6 +5,7 @@ import Agenda from '@/components/gdt-agenda/gdt-agenda';
 import Activity from '@/components/gdt-activity/gdt-activity';
 import Groups from '@/components/gdt-groups/gdt-groups';
 import Group from '@/components/gdt-group/gdt-group';
+import About from '@/components/gdt-about/gdt-about';
 
 Vue.use(Router);
 
@@ -36,6 +37,11 @@ export default new Router({
           name: 'group',
           component: Group,
           props: true,
+        },
+        {
+          path: '/guindostan',
+          name: 'guindostan',
+          component: About,
         },
       ],
     },
