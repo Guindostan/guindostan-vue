@@ -1,0 +1,9 @@
+<article v-if="join" class="join-wrapper">
+  <gdt-loading v-if="loading"></gdt-loading>
+  <h2 class="title" v-html="join.title.rendered">
+    {{ join.title.rendered }}
+  </h2>
+  <div v-html="join.content.rendered">
+    {{ join.content.rendered }}
+  </div>
+</article>

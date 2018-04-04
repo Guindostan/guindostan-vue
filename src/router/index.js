@@ -6,6 +6,7 @@ import Activity from '@/components/gdt-activity/gdt-activity';
 import Groups from '@/components/gdt-groups/gdt-groups';
 import Group from '@/components/gdt-group/gdt-group';
 import About from '@/components/gdt-about/gdt-about';
+import Join from '@/components/gdt-join/gdt-join';
 
 Vue.use(Router);
 
@@ -42,6 +43,11 @@ export default new Router({
           path: '/guindostan',
           name: 'guindostan',
           component: About,
+        },
+        {
+          path: '/unete',
+          name: 'unete',
+          component: Join,
         },
       ],
     },
