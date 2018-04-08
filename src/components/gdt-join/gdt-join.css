@@ -17,3 +17,38 @@
 .join-wrapper {
   max-width: 960px;;
 }
+
+label {
+  display: block;
+  font-size: var(--large);
+  margin-bottom: 0.25rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="tel"] {
+  width: 60%;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+  & + label {
+    display: inline-block;
+  }
+}
+
+textarea {
+  min-height: 6rem;
+}
+
+input[type="submit"] {
+  width: 30%;
+  padding: 0.5rem 1rem;
+  background: var(--valid);
+  color: var(--white);
+  border: none;
+  font-size: var(--large);
+  border-radius: 4px;
+}

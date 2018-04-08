@@ -6,4 +6,48 @@
   <div v-html="join.content.rendered">
     {{ join.content.rendered }}
   </div>
+  <form class="user-join" id="user-join" @submit="checkForm" method="post">
+
+    <div>
+      <label for="user-name">Nombre <small>(obligatorio)</small></label>
+      <input type="text" name="user-name" id="user-name" v-model="name" required>
+    </div>
+
+    <div>
+      <label for="user-email">Email <small>(obligatorio)</small></label>
+      <input type="email" name="user-email" id="user-email" v-model="email" required>
+    </div>
+
+    
+    <label>Tipo de cuota</label>
+    <div>
+        <input type="radio" id="user-payment-standard" name="user-payment" value="cuota-general" v-model="userPayment" checked>
+        <label for="user-payment-standard">
+          Cuota general (10€/mes)
+        </label>
+    </div>
+
+    <div>
+        <input type="radio" id="user-payment-reduced" name="user-payment" value="cuota-reducida" v-model="userPayment">
+        <label for="user-payment-reduced">
+          Parados o menores de 25 años (5€/mes)
+        </label>
+
+      </div>
+
+    <div>
+      <label for="user-email">Teléfono</label>
+      <input type="tel" name="user-telephone" id="user-telephone" v-model="telephone">
+    </div>
+
+    <div>
+      <label for="user-message">Mensaje</label>
+      <textarea name="user-message" id="user-message" v-model="message"></textarea>
+    </div>
+
+    <input type="submit" value="Quiero ser socio">
+  
+  </form>
+
+  <p>También puedes  contactar con nosotros a través de <a href="mailto:guindostan@gmail.com">guindostan@gmail.com</a></p>
 </article>
